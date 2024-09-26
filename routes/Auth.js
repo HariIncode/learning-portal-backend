@@ -12,7 +12,7 @@ router.post(
     body("name", "Enter a valid Name").isLength({ min: 3 }),
     body("email", "Enter a valid email").isEmail(),
     body("password", "Enter a valid password").isLength({ min: 5 }),
-    body("mobile", "Enter a valid mobile number").isLength({ min: 10 }),
+    body("mobile", "Enter a valid mobile number").isLength({ min: 10 })
   ],
   async (req, res) => {
     let success = false;
@@ -31,7 +31,7 @@ router.post(
           .status(400)
           .json({
             success: success,
-            error: "Sorry email or mobile number already exist",
+            error: "Sorry email or mobile number already exist"
           });
       }
 
@@ -48,7 +48,7 @@ router.post(
         user: {
           id: user.id,
           name: user.name,
-        },
+        }
       };
 
       let name = data.user.name;
