@@ -14,5 +14,6 @@ app.use(express.json());
 
 // API routing
 app.use('/api/auth',require('./routes/Auth'));
+app.use('/api/add/',require("./routes/Course"));
 
 app.listen(port,()=>console.log("App listerning at the port", port));

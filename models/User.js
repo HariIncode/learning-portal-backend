@@ -18,6 +18,10 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    isAdmin:{
+        type:Boolean,
+        default:false
+    },
     date: {
         type: Date,
         default: Date.now
